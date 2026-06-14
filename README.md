@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 GradTeam Finder
 
-## Getting Started
+A minimal, fast, and user-friendly web application designed to help university students easily find teammates and form groups for their graduation projects. No more random groups—find the right skills for your team!
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Key Features
+- **Student Profiles:** Users can register, specify their technical tracks (Frontend, Backend, AI, etc.), and list their skills.
+- **Team Creation:** Team leaders can create missing role requests, specify project domains, and look for specific talents.
+- **Smart Filtering:** Browse the directory and filter peers by skills or tracks to find the missing puzzle piece for your project.
+- **Direct Communication:** Seamlessly connect with students or team leaders via embedded WhatsApp or Telegram contact links.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
+- **Frontend:** Next.js (App Router), React, Tailwind CSS
+- **Backend:** Next.js Server Actions & API Routes
+- **Database:** PostgreSQL (hosted on Neon) + Prisma ORM
+- **Deployment:** Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
