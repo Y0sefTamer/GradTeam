@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String   @id @default(cuid())
+  name          String
+  email         String   @unique
+  password      String
+  track         String   // e.g., "Frontend", "Backend", "AI/ML"
+  skills        String   // e.g., "React, Node.js, Python"
+  contactLink   String   // e.g., "wa.me/..." or "t.me/..."
+  hasTeam       Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  createdTeams  Team[]
+}
+
+model Team {
+  id            String   @id @default(cuid())
+  name          String
+  domain        String   // e.g., "Healthcare", "FinTech"
+  requiredRoles String   // e.g., "Need 1 AI Dev and 1 UI/UX"
+  contactLink   String   // WhatsApp or Telegram link to team leader
+  createdAt     DateTime @default(now())
+  creatorId     String
+  creator       User     @relation(fields: [creatorId], references: [id])
+}
